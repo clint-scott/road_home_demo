@@ -61,6 +61,12 @@
 // ----------------------------------------- VARIABLES
 
 
+$text_dark: #2B2C2C;
+$text_med_dark: #666666;
+$text_med_light: #b9b9b9;
+$text_light: #ffffff;
+
+
 $black: #000000;
 
 $gray: #9b9b9b;
@@ -74,36 +80,27 @@ $white: #ffffff;
 $white_off: #f1f1f1;
 
 
-$accent_1: #62B3E4;
-$accent_2: #5EC8E4;
-$accent_3: #5EB4B4;
-$accent_4: #7C9E7C;
-$accent_5: #478787;
-$accent_6: #FFCF00;
-$accent_7: #D2AD32;
-$accent_8: #B3E275;
-$accent_9: #91D532;
-$accent_10: #CAD4DD;
-$accent_11: #9A9999;
+$accent_1a: #62B3E4;
+$accent_1b: #5EC8E4;
+$accent_1c: #5EB4B4;
+
+$accent_2a: #7C9E7C;
+$accent_2b: #478787;
+$accent_2c: #B3E275;
+$accent_2d: #91D532;
+
+$accent_3a: #FFCF00;
+$accent_3b: #D2AD32;
+$accent_3c: #B19027;
+
+$accent_4a: #CAD4DD;
+$accent_4b: #9A9999;
 
 
-$text_dark: #2B2C2C;
-$text_med_dark: #666666;
-$text_med_light: #b9b9b9;
-$text_light: #ffffff;
-
-
-$rnd_corner: 0.75rem;
-$rnd_corner_sm: 0.25rem;
-
-
-$trans_long: 0.6s;
-$trans_med: 0.4s;
-$trans_short: 0.2s;
-
-
-
-.acc1,.acc2,.acc3,.acc4,.acc5,.acc6,.acc7,.acc8,.acc9,.acc10,.acc11 {
+.acc-1a,.acc-1b,.acc-1c,
+.acc-2a,.acc-2b,.acc-2c,
+.acc-3a,.acc-3b,.acc-3c,
+.acc-4a,.acc-4b,.acc-4c {
 	@at-root ul#{&} {
 		li {
 			position: relative;
@@ -140,127 +137,144 @@ $trans_short: 0.2s;
 	}
 }
 
-.acc1 {
+
+.acc-1a {
 	&:not(ul) {
-		background-color: $accent_1 !important;
+		background-color: $accent_1a !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_1; background-color: $accent_1; }
+		li::before { color: $accent_1a; background-color: $accent_1a; }
 	}
 }
-
-.acc2 {
+.acc-1b {
 	&:not(ul) {
-		background-color: $accent_2 !important;
+		background-color: $accent_1b !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_2; background-color: $accent_2; }
+		li::before { color: $accent_1b; background-color: $accent_1b; }
 	}
 }
-
-.acc3 {
+.acc-1c {
 	&:not(ul) {
-		background-color: $accent_3 !important;
+		background-color: $accent_1c !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_3; background-color: $accent_3; }
+		li::before { color: $accent_1c; background-color: $accent_1c; }
 	}
 }
 
-.acc4 {
+.acc-2a {
 	&:not(ul) {
-		background-color: $accent_4 !important;
+		background-color: $accent_2a !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_4; background-color: $accent_4; }
+		li::before { color: $accent_2a; background-color: $accent_2a; }
 	}
 }
-
-.acc5 {
+.acc-2b {
 	&:not(ul) {
-		background-color: $accent_5 !important;
+		background-color: $accent_2b !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_5; background-color: $accent_5; }
+		li::before { color: $accent_2b; background-color: $accent_2b; }
 	}
 }
-
-.acc6 {
+.acc-2c {
 	&:not(ul) {
-		background-color: $accent_6 !important;
+		background-color: $accent_2c !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_6; background-color: $accent_6; }
+		li::before { color: $accent_2c; background-color: $accent_2c; }
 	}
 }
-
-.acc7 {
+.acc-2d {
 	&:not(ul) {
-		background-color: $accent_7 !important;
+		background-color: $accent_2d !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_7; background-color: $accent_7; }
+		li::before { color: $accent_2d; background-color: $accent_2d; }
 	}
 }
 
-.acc8 {
+.acc-3a {
 	&:not(ul) {
-		background-color: $accent_8 !important;
+		background-color: $accent_3a !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_8; background-color: $accent_8; }
+		li::before { color: $accent_3a; background-color: $accent_3a; }
 	}
 }
-
-.acc9 {
+.acc-3b {
 	&:not(ul) {
-		background-color: $accent_9 !important;
+		background-color: $accent_3b !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_9; background-color: $accent_9; }
+		li::before { color: $accent_3b; background-color: $accent_3b; }
 	}
 }
-
-.acc10 {
+.acc-3c {
 	&:not(ul) {
-		background-color: $accent_10 !important;
+		background-color: $accent_3c !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_10; background-color: $accent_10; }
+		li::before { color: $accent_3c; background-color: $accent_3c; }
 	}
 }
 
-.acc11 {
+.acc-4a {
 	&:not(ul) {
-		background-color: $accent_11 !important;
+		background-color: $accent_4a !important;
 		color: $text_light;
 	}
 	@at-root ul#{&} {
-		li::before { color: $accent_11; background-color: $accent_11; }
+		li::before { color: $accent_4a; background-color: $accent_4a; }
+	}
+}
+.acc-4b {
+	&:not(ul) {
+		background-color: $accent_4b !important;
+		color: $text_light;
+	}
+	@at-root ul#{&} {
+		li::before { color: $accent_4b; background-color: $accent_4b; }
 	}
 }
 
-.t-acc1 { color: $accent_1 !important; }
-.t-acc2 { color: $accent_2 !important; }
-.t-acc3 { color: $accent_3 !important; }
-.t-acc4 { color: $accent_4 !important; }
-.t-acc5 { color: $accent_5 !important; }
-.t-acc6 { color: $accent_6 !important; }
-.t-acc7 { color: $accent_7 !important; }
-.t-acc8 { color: $accent_8 !important; }
-.t-acc9 { color: $accent_9 !important; }
-.t-acc10 { color: $accent_10 !important; }
-.t-acc11 { color: $accent_10 !important; }
+
+.t-acc-1a { color: $accent_1a !important; }
+.t-acc-1b { color: $accent_1b !important; }
+.t-acc-1c { color: $accent_1c !important; }
+
+.t-acc-2a { color: $accent_2a !important; }
+.t-acc-2b { color: $accent_2b !important; }
+.t-acc-2c { color: $accent_2c !important; }
+.t-acc-2d { color: $accent_2d !important; }
+
+.t-acc-3a { color: $accent_3a !important; }
+.t-acc-3b { color: $accent_3b !important; }
+.t-acc-3c { color: $accent_3c !important; }
+
+.t-acc-4a { color: $accent_4a !important; }
+.t-acc-4b { color: $accent_4a !important; }
+
+
+$rnd_corner: 0.75rem;
+$rnd_corner_sm: 0.25rem;
+
+
+$trans_long: 0.6s;
+$trans_med: 0.4s;
+$trans_short: 0.2s;
 
 
 
@@ -290,8 +304,8 @@ $trans_short: 0.2s;
 
 /* $var: accentColor !default;
 @function accentColor($accent) {
-	@if $accent == 'acc1'  {
-		@return $accent_1;
+	@if $accent == 'acc-1a'  {
+		@return $accent_1a;
 	}
 } */
 
@@ -333,7 +347,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	margin: 0 0 1rem 0
 }
@@ -394,7 +408,7 @@ h1,h2,h3,p,li { padding: 0; }
 	justify-content: center;
 	align-content: center;
 	align-items: center;
-	padding: 1.5rem;
+	padding: 0.5rem 1.5rem;
 	font-weight: bold;
 	
 	
@@ -439,16 +453,21 @@ h1,h2,h3,p,li { padding: 0; }
 					background-color: $white;
 					color: $text_med_dark  !important;
 
-					&.t-acc1 { color: $accent_1 !important; }
-					&.t-acc2 { color: $accent_2 !important; }
-					&.t-acc3 { color: $accent_3 !important; }
-					&.t-acc4 { color: $accent_4 !important; }
-					&.t-acc5 { color: $accent_5 !important; }
-					&.t-acc6 { color: $accent_6 !important; }
-					&.t-acc7 { color: $accent_7 !important; }
-					&.t-acc8 { color: $accent_8 !important; }
-					&.t-acc9 { color: $accent_9 !important; }
-					&.t-acc10 { color: $accent_10 !important; }
+					&.t-acc-1a { color: $accent_1a !important; }
+					&.t-acc-1b { color: $accent_1b !important; }
+					&.t-acc-1c { color: $accent_1c !important; }
+
+					&.t-acc-2a { color: $accent_2a !important; }
+					&.t-acc-2b { color: $accent_2b !important; }
+					&.t-acc-2c { color: $accent_2c !important; }
+					&.t-acc-2d { color: $accent_2d !important; }
+
+					&.t-acc-3a { color: $accent_3a !important; }
+					&.t-acc-3b { color: $accent_3b !important; }
+					&.t-acc-3c { color: $accent_3c !important; }
+
+					&.t-acc-4a { color: $accent_4a !important; }
+					&.t-acc-4b { color: $accent_4b !important; }
 				}
 				&:nth-child(n+2) {
 					border-left: none;
@@ -472,7 +491,7 @@ h1,h2,h3,p,li { padding: 0; }
 			padding: 0.75rem 1.5rem;
 		}
 		h2 {
-			font-size: 1.25rem;
+			font-size: 1rem;
 		}
 	}
 	
@@ -540,6 +559,7 @@ h1,h2,h3,p,li { padding: 0; }
 			}
 			.title {
 				margin: 0 1rem;
+				font-weight: 400;
 				color: $text_light;
 			}
 		}
@@ -558,13 +578,14 @@ h1,h2,h3,p,li { padding: 0; }
 			p {
 				margin: 0 0 .5rem 0;
 				padding: 0.75rem 1.5rem;
-				color: $text_med_light;
+				color: $text_light;
+				opacity: 0.4;
 				text-align: center;
 			}
 
 			&.selected {
 				p {
-					color: $text_light;
+					opacity: 1;
 					&::after {
 						display: block;
 						content: '';
@@ -604,7 +625,7 @@ h1,h2,h3,p,li { padding: 0; }
 
 			&.selected {
 				h3 {
-					color: $accent_5;
+					color: $accent_2b;
 					margin-bottom: 0;
 					&::after {
 						display: block;
@@ -612,7 +633,7 @@ h1,h2,h3,p,li { padding: 0; }
 						margin: 1rem 0 0;
 						width: 100%;
 						height: 0.385rem;
-						background-color: $accent_5;
+						background-color: $accent_2b;
 					}
 				}
 			}
@@ -764,7 +785,7 @@ h1,h2,h3,p,li { padding: 0; }
 
 			// Box checked
 			&:checked+label::before {
-				border-color: $accent_1;
+				border-color: $accent_1a;
 			}
 
 			// Disabled state label.
@@ -846,7 +867,7 @@ h1,h2,h3,p,li { padding: 0; }
 					right: 0;
 					width: 0.25rem; 
 					height: 100%; 
-					background-color: $accent_10;
+					background-color: $accent_4a;
 				}
 
 				.title {
@@ -862,7 +883,7 @@ h1,h2,h3,p,li { padding: 0; }
 						border-top: 0.75rem solid transparent;
 						border-bottom: 0.75rem solid transparent;
 						
-						border-left: 1.25rem solid $accent_1;
+						border-left: 1.25rem solid $accent_1a;
 					}
 					&::after { // Circle
 						display: block;
@@ -880,35 +901,35 @@ h1,h2,h3,p,li { padding: 0; }
 						background-image: url('../assets/img/ico_timeline_sel.svg');
 					}
 	
-					&.acc2::before { // Triangel left
-						border-left-color: $accent_2;
+					&.acc-1b::before { // Triangel left
+						border-left-color: $accent_1b;
 					}
-					&.acc3::before { // Triangel left
-						border-left-color: $accent_3;
+					&.acc-1c::before { // Triangel left
+						border-left-color: $accent_1c;
 					}
-					&.acc4::before { // Triangel left
-						border-left-color: $accent_4;
+					&.acc-2a::before { // Triangel left
+						border-left-color: $accent_2a;
 					}
-					&.acc5::before { // Triangel left
-						border-left-color: $accent_5;
+					&.acc-2b::before { // Triangel left
+						border-left-color: $accent_2b;
 					}
-					&.acc6::before { // Triangel left
-						border-left-color: $accent_6;
+					&.acc-3a::before { // Triangel left
+						border-left-color: $accent_3a;
 					}
-					&.acc7::before { // Triangel left
-						border-left-color: $accent_7;
+					&.acc-3b::before { // Triangel left
+						border-left-color: $accent_3b;
 					}
-					&.acc8::before { // Triangel left
-						border-left-color: $accent_8;
+					&.acc-2c::before { // Triangel left
+						border-left-color: $accent_2c;
 					}
-					&.acc9::before { // Triangel left
-						border-left-color: $accent_9;
+					&.acc-2d::before { // Triangel left
+						border-left-color: $accent_2d;
 					}
-					&.acc10::before { // Triangel left
-						border-left-color: $accent_10;
+					&.acc-4a::before { // Triangel left
+						border-left-color: $accent_4a;
 					}
-					&.acc11::before { // Triangel left
-						border-left-color: $accent_11;
+					&.acc-4b::before { // Triangel left
+						border-left-color: $accent_4b;
 					}
 				}
 			}
@@ -933,39 +954,48 @@ h1,h2,h3,p,li { padding: 0; }
 							border-bottom: 0.75rem solid transparent;
 							
 							border-left: none;
-							border-right: 1.25rem solid $accent_1;
+							border-right: 1.25rem solid $accent_1a;
 						}
 						&::after { // circle
 							left: -1.385rem;
 							right: auto;
 						}
 	
-						&.acc2::before { // Triangel left
-							border-right-color: $accent_2;
+						&.acc-1b::before { // Triangel left
+							border-right-color: $accent_1b;
 						}
-						&.acc3::before { // Triangel left
-							border-right-color: $accent_3;
+						&.acc-1c::before { // Triangel left
+							border-right-color: $accent_1c;
 						}
-						&.acc4::before { // Triangel left
-							border-right-color: $accent_4;
+						
+						&.acc-2a::before { // Triangel left
+							border-right-color: $accent_2a;
 						}
-						&.acc5::before { // Triangel left
-							border-right-color: $accent_5;
+						&.acc-2b::before { // Triangel left
+							border-right-color: $accent_2b;
 						}
-						&.acc6::before { // Triangel left
-							border-right-color: $accent_6;
+						&.acc-2c::before { // Triangel left
+							border-right-color: $accent_2c;
 						}
-						&.acc7::before { // Triangel left
-							border-right-color: $accent_7;
+						&.acc-2d::before { // Triangel left
+							border-right-color: $accent_2d;
 						}
-						&.acc8::before { // Triangel left
-							border-right-color: $accent_8;
+
+						&.acc-3a::before { // Triangel left
+							border-right-color: $accent_3a;
 						}
-						&.acc9::before { // Triangel left
-							border-right-color: $accent_9;
+						&.acc-3b::before { // Triangel left
+							border-right-color: $accent_3b;
 						}
-						&.acc10::before { // Triangel left
-							border-right-color: $accent_10;
+						&.acc-3c::before { // Triangel left
+							border-right-color: $accent_3c;
+						}
+
+						&.acc-4a::before { // Triangel left
+							border-right-color: $accent_4a;
+						}
+						&.acc-4b::before { // Triangel left
+							border-right-color: $accent_4b;
 						}
 					}
 				}
