@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="full-bflex-rowser" lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<title>The Road Ahead</title>
+
+		<link rel="stylesheet" href="css/main.min.css">
+
+		<script src="js/vendor/jquery-3.2.1.min.js"></script>
+
+	</head>
+
+	<body>
+		<script>
+			console.log('*** setLocation ***');
+			
+			var isManager = true;
+			var extention = isManager ? 'manager/' : 'crew/';
+			setLocation();
+
+			function setLocation() {
+				$.ajax({
+					url: extention+'intro.html',
+					success: function (data) {
+						var start = data.indexOf('<div class="app">'),
+							end = data.lastIndexOf('</div>'),
+							markup = $(data.substring(start, end));
+
+						$('.app').html(markup.html());
+						
+						markup.remove();
+
+						$.each($('.app').find('a.page-nav'), function(index, obj) {
+							$(this).attr('href', extention+$(this).attr('href'));
+						});
+
+						$('.app').removeClass('hidden');
+					}
+				})
+				.fail(function () {
+					console.log('* load error: activity.json *');
+				});
+				
+			}
+		</script>
+
+		<div class="app"></div>
+		<!-- Load JS =============================-->
+
+		
+
+		<!-- <script src="js/main.js"></script> -->
+	</body>
+
+</html>
