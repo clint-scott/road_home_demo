@@ -1,0 +1,3 @@
+com.inkling.widget.allstate
+0.0.1
+20190814.170748z.2fb2e476

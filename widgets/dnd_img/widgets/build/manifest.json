@@ -1,0 +1,12 @@
+{
+    "viewAssets": {
+        "included": [
+            "index.html",
+            "css/view.css",
+            "vendorcss/idangerous.swiper.css",
+            "js/view.js",
+            "img/blank.svg",
+            "../../../../css/fonts/fonts.css"
+        ]
+    }
+}

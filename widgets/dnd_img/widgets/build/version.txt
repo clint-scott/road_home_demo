@@ -1,0 +1,3 @@
+com.inkling.widget.slideshow
+1.1.0
+20190814.210153z.2fb2e476

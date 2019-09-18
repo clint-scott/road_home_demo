@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+		<title>McDonald's</title>
+		<!-- Load project font CSS -->
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="css/view.css" />
+    </head>
+    <body>
+		<div class="wrapper container">
+			<h1 class="activity-title"></h1>
+			<p class="activity-question"></p>
+			<p class="activity-instructions"></p>
+				
+			<div class="activity-wrapper">
+					<!-- placeholders -->
+				<div id='drag_placeholders' class="drag-placeholders"></div>
+					<!-- options -->
+				<div id='drag_options' class="drag-options"></div>
+					<!-- labels -->
+				<div id='drag_labels' class="drag-labels"></div>
+					<!-- answers -->
+				<div id='targets_wrapper' class="drop-targets-wrapper">
+					<div id='target_img' class="target-image">
+						<img src="img/blank_169.svg" >
+					</div>
+					<div id='drop_targets' class="drop-targets"></div>
+				</div>
+			</div>
+			<div class="activity-buttons">
+				<button id='btn_submit' class="btn btn-submit trans" disabled>Submit</button>
+				<button id='btn_retry' class="btn btn-retry hidden trans">Retry</button>
+				<button id='btn_reset' class="btn btn-reset trans">Reset</button>
+			</div>
+			
+		</div>
+		
+		<!-- Load JS =============================-->
+			<script src="vendorjs/tweenmax.min.js"></script>
+			<script src="js/view.js"></script>
+    </body>
+</html>

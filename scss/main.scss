@@ -3,27 +3,27 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+    src: url("../fonts/roboto/roboto-regular.ttf");
     /* IE9 Compat Modes */
-    src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    src: url("../fonts/roboto/roboto-regular.ttf") format("truetype");
     /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: "Roboto";
 	font-style: italic;
-    src: url("../fonts/Roboto/Roboto-Italic.ttf");
+    src: url("../fonts/roboto/roboto-italic.ttf");
     /* IE9 Compat Modes */
-    src: url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+    src: url("../fonts/roboto/roboto-italic.ttf") format("truetype");
     /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: "Roboto";
     font-weight: 700;
-    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+    src: url("../fonts/roboto/roboto-bold.ttf");
     /* IE9 Compat Modes */
-    src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+    src: url("../fonts/roboto/roboto-bold.ttf") format("truetype");
     /* Safari, Android, iOS */
 }
 
@@ -31,18 +31,18 @@
     font-family: "Roboto";
     font-weight: 700;
 	font-style: italic;
-    src: url("../fonts/Roboto/Roboto-Bold-Italic.ttf");
+    src: url("../fonts/roboto/roboto-bold-italic.ttf");
     /* IE9 Compat Modes */
-    src: url("../fonts/Roboto/Roboto-Bold-Italic.ttf") format("truetype");
+    src: url("../fonts/roboto/roboto-bold-italic.ttf") format("truetype");
     /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: "Roboto";
     font-weight: 300;
-    src: url("../fonts/Roboto/Roboto-Light.ttf");
+    src: url("../fonts/roboto/roboto-light.ttf");
     /* IE9 Compat Modes */
-    src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+    src: url("../fonts/roboto/roboto-light.ttf") format("truetype");
     /* Safari, Android, iOS */
 }
 
@@ -50,9 +50,9 @@
     font-family: "Roboto";
 	font-weight: 300;
 	font-style: italic;
-    src: url("../fonts/Roboto/Roboto-Light-Italic.ttf");
+    src: url("../fonts/roboto/roboto-light-italic.ttf");
     /* IE9 Compat Modes */
-    src: url("../fonts/Roboto/Roboto-Light-Italic.ttf") format("truetype");
+    src: url("../fonts/roboto/roboto-light-italic.ttf") format("truetype");
     /* Safari, Android, iOS */
 }
 
@@ -357,8 +357,8 @@ $indented_sm: 3rem;
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     margin: 0;
     padding: 0;
     background-color: #fafafa;
@@ -547,13 +547,18 @@ h1,h2,h3,p,li { padding: 0; }
 // ----------------------------------------- CLASS STYLES
 
 
-#app {
+.app {
     position: relative;
     padding: 0;
     width: 100%;
     max-width: 768px;
     margin: 0 auto 3rem;
 	background-color: $white;
+
+	img {
+		width: initial;
+		height: initial;
+	}
 }
 
 .flex-row {
@@ -582,14 +587,12 @@ h1,h2,h3,p,li { padding: 0; }
 		background-color: $gray;
 		flex-wrap: wrap;
 		
-		> * {
-			margin-top: 0.75rem;
-		}
-
 		.left {
-			flex: 1 1 60%;
+			flex: 2 2 55%;
 			position: relative;
 			height: 100%;
+			margin: 0;
+			margin-top: 0.75rem;
 
 			.brand {
 				display: block;
@@ -607,7 +610,13 @@ h1,h2,h3,p,li { padding: 0; }
 				color: $text_light;
 			}
 		}
-		
+
+		.btn.role {
+			padding: 0;
+			flex: 3 0 45%;
+			white-space: nowrap;
+			margin-top: 0.75rem;
+		}
 	}
 
 	.nav-bar {
@@ -617,11 +626,10 @@ h1,h2,h3,p,li { padding: 0; }
 			display: flex;
 			justify-content: center;
 			flex: 1 1 0;
-			padding: 0.5rem 1.5rem;
+			padding: 1.25rem 1.5rem;
 			
 			p {
 				margin: 0;
-				padding: 0.75rem 1.5rem;
 				color: $text_light;
 				opacity: 0.4;
 				text-align: center;
@@ -683,11 +691,6 @@ h1,h2,h3,p,li { padding: 0; }
 			}
 		}
 
-	}
-
-	.btn.role {
-		padding: 0;
-		flex: 3 0 40%;
 	}
 }
 

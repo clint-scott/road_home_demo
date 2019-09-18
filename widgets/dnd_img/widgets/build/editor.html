@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Default Scaffold Editor</title>
+		<script type="text/javascript" src="vendorjs/ckeditor/ckeditor.js"></script>
+		<!-- <link rel="stylesheet" href="../../../../css/fonts/fonts.css"/> -->
+		<link rel="stylesheet" href="vendorcss/farbtastic/farbtastic.css" />
+		<link rel="stylesheet" href="css/edit.css" />
+	</head>
+	<body class="editor panel--active">
+		<input id='removeFocus' style="opacity: 0">
+		<form enctype="multipart/form-data">
+			<div id='wrapper'>
+				<div class="panel">
+					<ul class="panel-menu">
+						<li><a class="panel-tab" href="#tabs-1">Slides</a></li>
+						<li><a class="panel-tab" href="#tabs-2">Settings</a></li>
+						<span class="stretch"></span>
+						<li class="menu-underline"></li>
+					</ul>
+					<div class="panel-content">
+						<div id='tabs-1'>
+							<div class="group mediaContent"></div>
+							</div>
+							<div id='tabs-2'>
+							<div class="group settingsContent">
+								<p class="hanging-indent">
+									<label class="checkbox">
+										<input type="checkbox" name="allow_retry">
+										<span class="checkbox-label">Allow Retry</span>
+									</label>
+									<br>
+									<span class="details">
+										A retry button will appear once the activity has completed.
+									</span>
+								</p>
+								<p class="hanging-indent">
+									<label class="checkbox">
+										<input type="checkbox" name="randomize_options">
+										<span class="checkbox-label">Randomize Targets</span>
+									</label>
+									<br>
+									<span class="details">
+										Shuffle the order of the drop targets appear whenever the activity is initialized.
+									</span>
+								</p>
+								<p class="hanging-indent">
+									<label>Icon Shape</label>
+									<br>
+									<input type="radio" class="radio" name="icon_shape" value="50%" checked> Round<br>
+									<input type="radio" class="radio" name="icon_shape" value="0"> Square
+									<br>
+									<span class="details">
+										Change the appearance of the drag icons and drop targets.
+									</span>
+								</p>
+								<p class="hanging-indent">
+                                <label>Language</label>
+                                <br>
+                                <div class="select-wrapper">
+                                    <select id='languages_menu' class="languages-menu" name="languages_menu"></select>
+                                </div>
+                                <br>
+                                <span class="details">
+                                    Choose the language using on interface elements.
+                                </span>
+                            </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workspace">
+					<div class="group preview">
+						<div class="content">
+							
+							<div id='preview-area'>
+														
+								<menu class="button-menu vert-right">
+									<button class="button btn-replace" name="Replace" type="button"></button>
+									<button class="button btn-delete" name="Delete" type="button"></button>
+								</menu>
+								<div id='preview-hero' class="preview-hero icon-info">
+									<img src="img/grid-1x2.svg" />
+								</div>
+								
+								<div class="input-wrapper">
+									<label>Image Grid:</label> 
+									<select id='mode_selection' name="mode" class="mode">
+										<option value="mode_1" selected>1 by 2</option>
+										<option value="mode_2">1 by 3</option>
+										<option value="mode_3">2 by 2</option>
+									</select>
+									<br>
+									<span class="details">Choose the image hot spot layout.</span>
+								</div>
+								
+								<div class="shared-editor-wrapper">
+									<div class="editor-toolbar" id='editorToolbar-1' name="editorToolbar-1"></div>
+									<div class="editor-wrapper grow rendered-text">
+										<textarea class="activity_title" name="activity_title" id='activity_title' placeholder="Add Title"></textarea>
+									</div>
+									<hr/>
+									<div class="editor-wrapper grow rendered-text">
+										<textarea class="activity_question" name="activity_question" id='activity_question' placeholder="Add Question"></textarea>
+									</div>
+									<hr/>
+									<div class="editor-wrapper grow rendered-text">
+										<textarea class="activity_instructions" name="activity_instructions" id='activity_instructions' placeholder="Add Instructions"></textarea>
+									</div>
+								</div>
+								
+								<div class="col">
+									<div class="input-wrapper">
+										<label>Primary Color:</label><!-- COLOR PICKERS -->
+										<input type="text" id='color_primary' class="color-well" name="color_primary" maxlength="7" value="#62B3E4" />
+										<span class="warning">Not a valid color.</span>
+										
+										<label>Accent Color:</label>
+										<input type="text" id='color_acc_1' class="color-well" name="color_acc_1" maxlength="7" value="#478787" />
+										<span class="warning">Not a valid color.</span>
+										
+										<label>Correct Color:</label><!-- COLOR PICKERS -->
+										<input type="text" id='color_correct' class="color-well" name="color_correct" maxlength="7" value="#91D532" />
+										<span class="warning">Not a valid color.</span>
+										
+										<label>Incorrect Color:</label>
+										<input type="text" id='color_incorrect' class="color-well" name="color_incorrect" maxlength="7" value="#b70909" />
+										<span class="warning">Not a valid color.</span>
+									</div>
+									
+									<div class="color-picker-wrapper">
+										<div id='color_picker' class="color-picker"></div>
+									</div>
+								</div>
+								
+								<div id='icon-info' class="icon-info">
+									<div class="col">
+										<div class="col preview-image-wrapper">
+										
+											<div id='preview-image'>
+												<div class="drag-object clr-pri">
+													<img src="img/blank.svg" />
+													<div class="drag-icon"></div>
+												</div>
+											</div>
+											<menu class="button-menu vert-right">
+												<button class="button btn-replace" name="Replace" type="button"></button>
+												<button class="button btn-delete" name="Delete" type="button"></button>
+											</menu>
+											
+										</div>
+										
+										<div>
+											<div class="shared-editor-wrapper">
+												<div class="editor-toolbar" id='editorToolbar-2' name="editorToolbar-2"></div>
+												<div class="editor-wrapper grow rendered-text">
+													<textarea class="icon_label" name="icon_label" id='icon_label' placeholder="Add Icon Label"></textarea>
+												</div>
+											</div>
+											
+											<div class="input-wrapper">
+												<label>Icon Position:</label> 
+												<select id='icon_pos' name="icon_pos" class="icon_pos">
+													<option value="center top">Top Center</option>
+													<option value="left center">Middle Left</option>
+													<option value="center" selected>Center</option>
+													<option value="right center">Middle Right</option>
+													<option value="center bottom">Bottom Center</option>
+												</select>
+												<span class="details">Choose the background position of the icon image.</span>
+											</div>
+											
+											<div class="input-wrapper">
+												<label>Target Hot spot:</label> 
+												<select id='target_index' name="target_index" class="target_index">
+													<option value="-1">Choose target</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+												</select>
+												<span class="details">Choose location on image grid.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+									
+							</div>
+						</div>
+					</div>
+					<div class="upload">
+						<div class="drag-area">
+							<div class="upload-instructions">
+								<div id='upload-image-icon'></div>
+								<span class="dragText">Click to Upload Images</span>
+								<div class="details">or drag and drop files from your desktop</div>
+							</div>
+						</div>
+						<input id='image-uploader' type="file" multiple="multiple" accept="image/*"/>
+						<input id='image-replacer' type="file" accept="image/*"/>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="overlay-mask"></div>
+		<div class="dialog-box confirmation">
+			<div class="dialogText">
+				<h4>Are you sure?</h4>
+				<p>You cannot undo this action.</p>
+			</div>
+			<div class="dialogButtons">
+				<div class="button-div confirmDelete clickable">
+					<div class="button-text">Remove</div>
+				</div>
+				<br>
+				<span class="cancelDelete clickable">Cancel</span>
+			</div>
+			<div class="show-again">
+				<input type="checkbox" id='showDelConf' class="custom-checkbox">
+				<div class="fake-checkbox"></div>
+				Don't show this message again.
+			</div>
+		</div>
+		<div class="dialog-box badUpload">
+			<div class="dialogText">
+				<h4>Wait a second!</h4>
+				<p>Some files you selected are not images.<br>These files will be ignored.</p>
+			</div>
+			<div class="dialogButtons">
+				<div class="button-div okay clickable">
+					<div class="button-text">OK</div>
+				</div>
+				<br>
+			</div>
+		</div>
+	</body>
+	<script src="js/edit.js"></script>
+</html>
